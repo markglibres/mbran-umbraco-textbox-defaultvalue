@@ -1,0 +1,37 @@
+﻿﻿{   
+    propertyEditors: [      
+        {
+            /*this must be a unique alias*/ 
+            alias: "MBran.Textbox.DefaultValue",
+            /*the name*/
+            name: "Textbox with default",
+            /*the html file we will load for the editor*/
+            editor: {
+                view: "~/App_Plugins/MBran.Textbox.DefaultValue/textbox.DefaultValue.html",
+				valueType: 'JSON'
+            },
+			prevalues:{
+				fields: [
+					{
+					   label: "Default Value",
+					   description: "Default Value",
+					   key: "defaultValue",
+					   view: "textstring"
+					}
+					{
+					   label: "Show if blank",
+					   description: "Show the default text value from backoffice if value is blank",
+					   key: "showIfBlank",
+					   view: "boolean"
+					}
+				]
+		}
+        }
+    ]
+    ,
+    //array of files we want to inject into the application on app_start
+    javascript: [
+        '~/App_Plugins/MBran.Textbox.DefaultValue/textbox.DefaultValue.Controller.js'
+    ]
+	
+}
