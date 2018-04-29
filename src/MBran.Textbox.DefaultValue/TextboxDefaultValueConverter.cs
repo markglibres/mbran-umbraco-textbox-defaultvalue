@@ -1,5 +1,5 @@
 ﻿using System;
-using Newtonsoft.Json;
+using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
@@ -11,13 +11,21 @@ namespace MBran.Textbox.DefaultValue
     {
         public object ConvertDataToSource(PublishedPropertyType propertyType, object source, bool preview)
         {
-            return JsonConvert.DeserializeObject<TextboxDefaultValue>(source as string);
+            return source as string;
         }
 
         public object ConvertSourceToObject(PublishedPropertyType propertyType, object source, bool preview)
         {
-            var data = source as TextboxDefaultValue;
-            return string.IsNullOrWhiteSpace(data?.Value) ? data?.Default : data.Value;
+            var dataTypeService = ApplicationContext.Current.Services.DataTypeService;
+            var preValues = dataTypeService
+                .GetPreValuesCollectionByDataTypeId(propertyType.DataTypeId)
+                .PreValuesAsDictionary;
+
+            var txtValue = source as string;
+
+            return string.IsNullOrWhiteSpace(txtValue) 
+                ? preValues["defaultValue"].Value
+                : txtValue;
         }
 
         public object ConvertSourceToXPath(PublishedPropertyType propertyType, object source, bool preview)

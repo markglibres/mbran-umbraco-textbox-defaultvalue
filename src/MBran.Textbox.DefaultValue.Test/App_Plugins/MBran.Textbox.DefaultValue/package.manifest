@@ -4,8 +4,7 @@
             alias: "MBran.Textbox.DefaultValue",
             name: "Textbox with default value",
             editor: {
-                view: "~/App_Plugins/MBran.Textbox.DefaultValue/textbox.DefaultValue.html",
-				valueType: 'JSON'
+                view: "~/App_Plugins/MBran.Textbox.DefaultValue/textbox.DefaultValue.html"
             },
 			prevalues:{
 				fields: [
@@ -14,20 +13,12 @@
 					   description: "Default Value",
 					   key: "defaultValue",
 					   view: "textstring"
-					},
-					{
-					   label: "Show if blank",
-					   description: "Show the default text value from backoffice if value is blank",
-					   key: "showIfBlank",
-					   view: "boolean"
-					}
-				]
+					}]
+			}
 		}
-        }
     ]
     ,
     javascript: [
         '~/App_Plugins/MBran.Textbox.DefaultValue/textbox.DefaultValue.Controller.js'
     ]
-	
 }

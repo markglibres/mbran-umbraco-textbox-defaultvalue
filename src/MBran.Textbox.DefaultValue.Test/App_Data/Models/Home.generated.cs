@@ -46,12 +46,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// ctaTitle
+		/// fromString
 		///</summary>
-		[ImplementPropertyType("ctaTitle")]
-		public string CtaTitle
+		[ImplementPropertyType("fromString")]
+		public string FromString
 		{
-			get { return this.GetPropertyValue<string>("ctaTitle"); }
+			get { return this.GetPropertyValue<string>("fromString"); }
+		}
+
+		///<summary>
+		/// moreInfo
+		///</summary>
+		[ImplementPropertyType("moreInfo")]
+		public string MoreInfo
+		{
+			get { return this.GetPropertyValue<string>("moreInfo"); }
 		}
 
 		///<summary>

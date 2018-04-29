@@ -20,7 +20,7 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	// Mixin content Type 1062 with alias "hasMetaHeader"
+	// Mixin content Type 1084 with alias "hasMetaHeader"
 	/// <summary>_HasMetaHeader</summary>
 	public partial interface IHasMetaHeader : IPublishedContent
 	{

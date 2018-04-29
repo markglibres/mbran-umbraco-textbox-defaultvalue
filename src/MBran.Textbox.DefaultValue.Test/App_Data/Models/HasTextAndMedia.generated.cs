@@ -20,7 +20,7 @@ using Umbraco.ModelsBuilder.Umbraco;
 
 namespace Umbraco.Web.PublishedContentModels
 {
-	// Mixin content Type 1063 with alias "hasTextAndMedia"
+	// Mixin content Type 1085 with alias "hasTextAndMedia"
 	/// <summary>_HasTextAndMedia</summary>
 	public partial interface IHasTextAndMedia : IPublishedContent
 	{
