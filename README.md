@@ -1,7 +1,7 @@
 # MBran Textbox Default Value
 MBran Textbox is an Umbraco package for textbox with default value.
 
-[1]: https://our.umbraco.org/projects/backoffice-extensions/mbran-textbox-defaultvalue/ "Umbraco Package Link"
+[1]: https://our.umbraco.org/projects/backoffice-extensions/mbran-textbox-default-value/ "Umbraco Package Link"
 [2]: https://www.nuget.org/packages/MBran.Textbox.DefaultValue/ "NuGet Package Link"
 
 ## From NuGet:
@@ -12,7 +12,7 @@ MBran Textbox is an Umbraco package for textbox with default value.
 
 ## From Umbraco Package  Manager:
 
-1. Download and install package ([https://our.umbraco.org/projects/backoffice-extensions/mbran-textbox-defaultvalue/][1])
+1. Download and install package ([https://our.umbraco.org/projects/backoffice-extensions/mbran-textbox-default-value//][1])
 2. Create new data type of type "Textbox with default value"
 3. Add a new property out from your newly created data type to your desired document type.
 
